@@ -1,0 +1,88 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:form="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
+    xmlns:l="sap.ui.layout">
+    <Dialog id="_IDDialog"  title="Details" class="sapUiSmallMargin" contentHeight="400px" contentWidth="50%">
+
+ <Panel >
+       <FlexBox  class="flex" >
+    <VBox class="flex" alignItems="End" >
+  <FlexBox   class="headerItem">
+     <Label class="sapUiTinyMarginTop" text="Chartering Number :"/>
+  <Input   value="{ChartingFilterModel>/CharterNumber}" editable="false"/>  
+    </FlexBox>
+     <FlexBox  class="headerItem">
+
+     <Label class="sapUiTinyMarginTop"  text="VoyageNumber : "/>
+  <Input  value="{ChartingFilterModel>/VoyageNumber}" editable="false"/>  
+    </FlexBox>
+<FlexBox class="headerItem">
+     <Label class="sapUiTinyMarginTop"
+     text="Vendor : "/> 
+  <Input  value="{ChartingFilterModel>/Vendor}" editable="false"/>  
+    </FlexBox>
+    <FlexBox class="headerItem">
+     <Label class="sapUiTinyMarginTop" text="CommercialRanking :"/>
+      <Input  value="{ChartingFilterModel>/CommercialRanking}" editable="false"/>  
+
+     </FlexBox>
+     <FlexBox   class="headerItem">
+     <Label  class="sapUiTinyMarginTop" text="Code : "/>
+      <Input   value="{ChartingFilterModel>/Code}" editable="false"/>  
+
+     </FlexBox>
+      <FlexBox   class="headerItem">
+     <Label  class="sapUiTinyMarginTop" text="Done By Vendor : "/>
+      <Input   value="{ChartingFilterModel>/CreatedBy}" editable="false"/>  
+
+     </FlexBox>
+     <FlexBox  class="headerItem">
+     <Label  class="sapUiTinyMarginTop" text="Value :"/>
+      <Input   value="{ChartingFilterModel>/Value}" editable="false"/>  
+
+     </FlexBox>
+     </VBox>
+
+     <VBox  class="flex" alignItems="End" >
+     <FlexBox class="headerItem">
+      <Label  class="sapUiTinyMarginTop" text="Bid Date : "/>
+  <Input   value="{ChartingFilterModel>/BidDate}" editable="false"/>  
+     </FlexBox>
+     <FlexBox  class="headerItem">
+     <Label  class="sapUiTinyMarginTop" text="Bid Time : "/>
+  <Input value="{ChartingFilterModel>/BidTime}" editable="false"/>  
+     </FlexBox>
+     <FlexBox class="headerItem">
+     <Label  class="sapUiTinyMarginTop" text="Currency : "/>
+      <Input  value="{ChartingFilterModel>/Curr}" editable="false"/>  
+
+     </FlexBox>
+     <FlexBox class="headerItem">
+      <Label class="sapUiTinyMarginTop" text="Score : "/>
+  <Input  value="{ChartingFilterModel>/Score}" editable="false"/>  
+     </FlexBox>
+     
+     
+      <FlexBox   class="headerItem">
+     <Label  class="sapUiTinyMarginTop" text="Eligibility : "/>
+      <Input   value="{ChartingFilterModel>/Eligible}" editable="false"/>  
+
+     </FlexBox>
+     </VBox>
+     </FlexBox>
+     
+     
+     
+    </Panel>
+
+    
+
+
+         <footer>
+        	<OverflowToolbar id="_IDGenOverflowToolbar2" >	
+                <ToolbarSpacer id="_IDGenToolbarSpacer2"/>
+                <Button id="_IDGenButto" text="Close" press="oncancell">
+				</Button>
+			</OverflowToolbar>
+        </footer>
+    </Dialog>
+</core:FragmentDefinition>   
