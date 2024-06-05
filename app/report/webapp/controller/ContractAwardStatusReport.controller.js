@@ -87,35 +87,21 @@ sap.ui.define(
           oEvent.getSource().getBinding("items").filter([oFilter1]);
         },
         onNavigateDetails: function(oEvent) {
+          
           let oSource = oEvent.getSource();
           let data = oSource.getBindingContext("contractAwardModel").getObject();
           let tempModel = new sap.ui.model.json.JSONModel();
           tempModel.setData([data]);
           var oView = this.getView();
-          
-          // Check if the dialog fragment is already created
           if (!this._oDialog1) {
-              try {
-                  // Instantiate the fragment
-                  this._oDialog1 = sap.ui.xmlfragment("com.ingenx.nauti.report.fragments.ContractAwardDetails", this);
-                  oView.addDependent(this._oDialog1);
-              } catch (error) {
-                  console.error("Error instantiating the fragment: ", error);
-                  return; // Exit the function if fragment creation fails
-              }
+              this._oDialog1 = sap.ui.xmlfragment("com.ingenx.nauti.report.fragments.contractAwardDetails", this);
+              oView.addDependent(this._oDialog1);
+     
+       
           }
-      
-          // Check if the dialog has been instantiated correctly
-          if (this._oDialog1 && this._oDialog1 instanceof sap.ui.core.Control) {
-              // Set the model to the dialog
-              this._oDialog1.setModel(tempModel, "contractAwardReport1");
-              // Open the dialog
-              this._oDialog1.open();
-          } else {
-              console.error("Dialog fragment was not instantiated correctly or is not a valid UI5 control.");
-              console.log("Dialog instance: ", this._oDialog1);
-          }
-      },
+          this._oDialog1.setModel(tempModel,"contractAwardReport1")
+          this._oDialog1.open();
+        },
       
       
       oncancell: function () {

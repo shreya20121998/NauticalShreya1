@@ -21,7 +21,7 @@
                 <Label class="sapUiTinyMarginTop" text="Award Created At" />
                 <Text text="{contractAwardReport1>/0/AwrdCreatedAt}"  />                    
                 <Label class="sapUiTinyMarginTop" text="Award Created On" />
-                <Text text="{contractAwardReport1>/0/AwrdCreatedOn}"  />>  
+                <Text text="{contractAwardReport1>/0/AwrdCreatedOn}"  />
 
             </form:SimpleForm>             
         </Panel>
